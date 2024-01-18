@@ -1,0 +1,44 @@
+ul {
+  list-style-type: none;
+  margin-top: 30px;
+
+  li {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    animation: appearing 0.3s ease-out forwards;
+
+    a {
+      text-decoration: none;
+      padding: 6px 10px;
+      background-color: royalblue;
+      color: white;
+      border-radius: 4px;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: rgb(36, 60, 129);
+        color: white;
+      }
+    }
+  }
+}
+
+.loading {
+  margin-top: 30px;
+  font-size: 42px;
+}
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
